@@ -14,16 +14,29 @@ let appData = {
 
 checkSallary();
 function checkSallary() {
-  for (let i = 0; i < 1; i++) {
-    let a = prompt("Введите обязательную статью расходов в этом месяце"),
-      b = +prompt("Во сколько обойдется?");
+//   for (let i = 0; i < 2; i++) {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце"),
+//       b = +prompt("Во сколько обойдется?");
  
+//     if ((typeof (a)) === 'string' && (typeof (b)) === 'number' && (typeof (a) != null) && (typeof (b) != null && a != '' && b != '' && a.length < 50)) {
+//       console.log('done');
+//       appData.expenses[a] = b;
+//     } else {
+//       return checkSallary();
+//     }
+//   }
+    let i = 0;
+  while(i < 2){
+    let a = prompt("Введите обязательную статью расходов в этом месяце"),
+        b = +prompt("Во сколько обойдется?");
+
     if ((typeof (a)) === 'string' && (typeof (b)) === 'number' && (typeof (a) != null) && (typeof (b) != null && a != '' && b != '' && a.length < 50)) {
-      console.log('done');
-      appData.expenses[a] = b;
+        console.log('done');
+        appData.expenses[a] = b;
     } else {
-      return checkSallary();
+        return checkSallary();
     }
+    i++;
   }
 }
 
